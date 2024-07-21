@@ -1,0 +1,75 @@
+body {
+  background-color: #282828;
+}
+
+/* Nav CSS */
+
+.nav {
+  border: 4px solid lightcoral;
+  /* background-color: darkgrey; */
+  color: white;
+  background-image: url("./assets/pexels-mark-angelo-sampan-738078-1587927.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.navLinks h2 {
+  margin-left: 2em;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Home CSS */
+
+.intro {
+  color: white;
+  height: 90px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.artistTile {
+  border: 1px solid white;
+  color: white;
+  height: 400px;
+  padding: 2em;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.bandPhoto {
+  height: 225px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.play, .linkIcon {
+  height: 40px;
+}
+
+.description {
+  width: 50%;
+  border: 1px solid white;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px;
+  height: 300px;
+  margin-top: 20px;
+  overflow: scroll;
+}
+
+.spotifyPreview {
+  border-radius:12px;
+  width:100%;
+  height: 350px;
+  margin-top: 10px;
+}
+
+.links {
+  justify-content: space-between;
+  padding: 5px;
+}
