@@ -4,8 +4,8 @@ function ArtistTile() {
         <>
             <hr className="divider"></hr>
             <div className="artistTile flex">
-                <div className="bandName">
-                    <h3>Them Crooked Vultures</h3>
+                <div>
+                    <h3 className="bandName">Them Crooked Vultures</h3>
                     <img className="bandPhoto" src="./src/assets/pexels-sebastian-ervi-866902-1763075.jpg" alt="band photo"></img>
                     <div className="flex links">
                         <a href="#"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>

@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+a:hover {
+  text-decoration:underline;
+}
+
 /* Nav CSS */
 
 .nav {
@@ -91,6 +95,11 @@ body {
 .links {
   justify-content: space-between;
   padding: 5px;
+}
+
+.bandName {
+  color: white;
+  text-decoration: none;
 }
 
 /* BandAdd CSS */

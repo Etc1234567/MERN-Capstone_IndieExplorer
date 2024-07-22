@@ -19,9 +19,9 @@ function Home() {
 
             <hr className="divider"></hr>
             <div className="artistTile flex">
-                <div className="bandName">
-                    <h3>Say That Again</h3>
-                    <img className="bandPhoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR7QR1WKlDngp45oXXBqdSRWTmCGFtacpIQ&s" alt="band photo"></img>
+                <div>
+                    <a className="bandName" href="https://www.instagram.com/saythatagainkc/"><h3>Say That Again</h3></a>
+                    <a href="https://www.instagram.com/saythatagainkc/"><img className="bandPhoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR7QR1WKlDngp45oXXBqdSRWTmCGFtacpIQ&s" alt="band photo"></img></a>
                     <div className="flex links">
                         <a href="https://www.instagram.com/saythatagainkc/"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>
                         <a href="https://www.facebook.com/SayThatAgainKC/"><img className="linkIcon" src="./src/assets/facebook.svg" alt="snapchat icon"></img></a>
@@ -39,14 +39,14 @@ function Home() {
             <hr className="divider"></hr>
 
             <div className="artistTile flex">
-                <div className="bandName">
-                    <h3>Doglava</h3>
-                    <img className="bandPhoto" src="https://static1.squarespace.com/static/559af0b3e4b0c25a8fabd035/64dfdf8105a6b577d3a14ecb/666b564ae6db3a43920df6fe/1718822943007/Plaza+Art+Fair+-+Doglava.jpg?format=1500w" alt="band photo"></img>
+                <div>
+                    <a className="bandName" href="https://www.instagram.com/doglava/?hl=en"><h3>Doglava</h3></a>
+                    <a href="https://www.instagram.com/doglava/?hl=en"><img className="bandPhoto" src="https://static1.squarespace.com/static/559af0b3e4b0c25a8fabd035/64dfdf8105a6b577d3a14ecb/666b564ae6db3a43920df6fe/1718822943007/Plaza+Art+Fair+-+Doglava.jpg?format=1500w" alt="band photo"></img></a>
                     <div className="flex links">
-                        <a href="#"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>
-                        <a href="#"><img className="linkIcon" src="./src/assets/snapchat.svg" alt="snapchat icon"></img></a>
-                        <a href="#"><img className="linkIcon" src="./src/assets/spotify.svg" alt="spotify icon"></img></a>
-                        <a href="#"><img className="linkIcon" src="./src/assets/youtube.svg" alt="youtube icon"></img></a>
+                        <a href="https://www.instagram.com/doglava/?hl=en"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>
+                        <a href="https://www.facebook.com/doglava/"><img className="linkIcon" src="./src/assets/facebook.svg" alt="facebook icon"></img></a>
+                        <a href="https://open.spotify.com/artist/2DxML1TqtSfKbvmaXb3o4g"><img className="linkIcon" src="./src/assets/spotify.svg" alt="spotify icon"></img></a>
+                        <a href="https://www.youtube.com/channel/UCeemdifrPSdIxtDXLJStIPA"><img className="linkIcon" src="./src/assets/youtube.svg" alt="youtube icon"></img></a>
                     </div>
                 </div>
                 <p className="description">Hot improv funk jams for dogs! But hoomans can listen too... Just some good boys and girls from Kansas City. Unprofessionally produced music from our kennel to yours.</p>
