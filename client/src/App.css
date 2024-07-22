@@ -1,18 +1,22 @@
 body {
   background-color: #282828;
+  color: white;
 }
 
 /* Nav CSS */
 
 .nav {
-  border: 4px solid lightcoral;
-  /* background-color: darkgrey; */
   color: white;
   background-image: url("./assets/pexels-mark-angelo-sampan-738078-1587927.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: space-between;
   padding: 2em;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
 }
 
 .navLinks h2 {
@@ -25,26 +29,38 @@ body {
 
 /* Home CSS */
 
+.pageHead {
+  color: white;
+  text-align: center;
+}
+
 .intro {
   color: white;
   height: 90px;
   margin-top: 50px;
-  text-align: center;
+  justify-content: space-evenly;
 }
 
 .artistTile {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   color: white;
   height: 400px;
   padding: 2em;
   text-align: center;
   justify-content: space-evenly;
+  border-radius:12px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  color: white;
 }
 
 .bandPhoto {
   height: 225px;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius:12px;
 }
 
 .play, .linkIcon {
@@ -56,10 +72,13 @@ body {
   border: 1px solid white;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 5px;
+  padding: 10px;
   height: 300px;
   margin-top: 20px;
-  overflow: scroll;
+  /* overflow: scroll; */
+  border-radius:12px;
+  text-align:left;
+  background-color: #3D3D3D;
 }
 
 .spotifyPreview {
@@ -73,3 +92,58 @@ body {
   justify-content: space-between;
   padding: 5px;
 }
+
+/* BandAdd CSS */
+.bandAdd {
+  color: white;
+  text-align: center;
+  width: 75%;
+  background-color: coral;
+  border-radius:12px;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.bandAddInput {
+  width: 50%;
+  margin-right: 10px;
+}
+
+/* Footer CSS */
+.footer {
+  background-image: url(./assets/pexels-mark-angelo-sampan-738078-1587927.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  background-position-y: 35%;
+  color: white;
+  margin-top: 20px;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+
+/* About Us CSS */
+.aboutUsContent {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 55%;
+}
+
+.about, .contact {
+  margin-top: 20px;
+}
+
+.faq {
+  width: 75%;
+  margin: auto;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.contactSub {
+  margin-right: 10px;
+}
+
+

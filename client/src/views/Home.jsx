@@ -1,10 +1,23 @@
 import ArtistTile from "../components/ArtistTile"
+import AddBand from "./AddBand"
+import Nav from "../components/Nav"
 
 function Home() {
     return (
         <>
-            <h3 className="intro">Welcome to IndieExplorer! Check out some of the local artists below or start adding your own.</h3>
+            <Nav />
 
+            <div className="flex intro">
+                <h3>Welcome to IndieExplorer! Check out some of the local artists below or start adding your own.</h3>
+                <a href="#collapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse"><img className="linkIcon" src="./src/assets/plus-circle-fill.svg" alt="add icon"></img></a>
+            </div>
+            <div className="collapse" id="collapse">
+                <AddBand />
+            </div>
+
+            <h1 className="pageHead">Kansas City, Missouri</h1>
+
+            <hr className="divider"></hr>
             <div className="artistTile flex">
                 <div className="bandName">
                     <h3>Say That Again</h3>
@@ -23,6 +36,7 @@ function Home() {
                     <iframe className="spotifyPreview" src="https://open.spotify.com/embed/track/3lWHvlNrZVFSc7sI6DvxQH?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
+            <hr className="divider"></hr>
 
             <div className="artistTile flex">
                 <div className="bandName">
@@ -42,11 +56,7 @@ function Home() {
                     <iframe className="spotifyPreview" src="https://open.spotify.com/embed/track/2LNawnq1nn70chdQUA5aH7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
-            <ArtistTile />
-            <ArtistTile />
-            <ArtistTile />
-            <ArtistTile />
-            <ArtistTile />
+
             <ArtistTile />
         </>
     )

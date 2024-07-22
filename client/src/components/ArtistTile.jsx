@@ -2,6 +2,7 @@
 function ArtistTile() {
     return (
         <>
+            <hr className="divider"></hr>
             <div className="artistTile flex">
                 <div className="bandName">
                     <h3>Them Crooked Vultures</h3>

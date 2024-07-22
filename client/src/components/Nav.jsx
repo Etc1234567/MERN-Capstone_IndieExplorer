@@ -4,11 +4,11 @@ function Nav() {
     return (
         <>
             <div className="nav flex">
-                <h1>🎸 IndieExplorer</h1>
+                <a href="#" className="navLink"><h1>🎸 IndieExplorer</h1></a>
                 <div className="navLinks flex">
-                    <h2>Venues</h2>
-                    <h2>Shows</h2>
-                    <h2>Festival Guides</h2>
+                    <a href="#" className="navLink"><h2>Venues</h2></a>
+                    <a href="#" className="navLink"><h2>Shows</h2></a>
+                    <a href="#" className="navLink"><h2>Festival Guides</h2></a>
                 </div>
             </div>
         </>
