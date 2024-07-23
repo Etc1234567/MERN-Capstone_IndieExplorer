@@ -1,4 +1,5 @@
 import Nav from "../components/Nav"
+import { Link } from "react-router-dom"
 
 function AboutUs() {
     return (
@@ -8,7 +9,7 @@ function AboutUs() {
 
                 <h1 className="pageHead about">About Us:</h1>
             <div className="aboutUsContent">
-                <p>IndieExplorer is a site where local bands and artists are featured so community members can explore the local music scene and find new bands to enjoy. We feature local artists with 100,000 or less followers in a city guide where users can conveniently browse multiple bands in one place. </p>
+                <h3 className="abouttext">IndieExplorer is a site where local bands and artists are featured so community members can explore the local music scene and find new bands to enjoy. We feature local artists with 100,000 or less followers in a city guide where users can conveniently browse multiple bands in one place. </h3>
             </div>
             <div className="faq">
                 <h2>FAQs:</h2>
@@ -25,7 +26,7 @@ function AboutUs() {
                         <p>Request to have them added! At the top of the page, click the pink plus button icon (<img src="./src/assets/plus-circle-fill.svg"></img>) and paste the Spotify link of your band.</p>
                     </li>
                 </ol>
-                <p>For any additional questions not answered here: <button className="btn btn-light">contact our team!</button></p>
+                <p>For any additional questions not answered here: <Link to="/contact" className="btn btn-light">contact our team!</Link></p>
             </div>
             </div>
         </>

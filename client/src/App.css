@@ -136,8 +136,11 @@ a:hover {
 /* About Us CSS */
 .aboutUsContent {
   margin: auto;
-  margin-bottom: 20px;
-  width: 55%;
+  margin-top: 40px;
+  width: 75%;
+  height: 550px;
+  background-image: url("./src/assets/pexels-sebastian-ervi-866902-1763075.jpg");
+  background-size:cover;
 }
 
 .about, .contact {
@@ -151,8 +154,31 @@ a:hover {
   padding: 10px;
 }
 
+.abouttext {
+  background-color: #3D3D3D;
+  padding: 20px;
+}
+
+/* Contact CSS */
+
 .contactSub {
   margin-right: 10px;
+}
+
+.contactForm {
+  margin-bottom: 285px;
+  margin-top: 20px;
+  width: 70%;
+  padding: 20px;
+  background-image: url("./src/assets/pexels-pixabay-164755.jpg");
+  opacity: 75%;
+  background-size: cover;
+  font-size: 20px;
+}
+
+.contactImg {
+  height: 600px;
+  margin-left: 50%;
 }
 
 

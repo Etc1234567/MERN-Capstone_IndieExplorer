@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
+
 function Footer() {
     return (
         <>
             <div className="footer flex">
-                <a href="#" className="navLink"><h3>About Us</h3></a>
-                <h3> Questions or want to become a curator? <button className="btn btn-light">Contact our team!</button> </h3>
+                <Link to="/about" className="navLink"><h3>About Us</h3></Link>
+                <h3> Questions or want to become a curator? <Link to="/contact" className="btn btn-light">Contact our team!</Link> </h3>
             </div>
         </>
     )

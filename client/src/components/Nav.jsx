@@ -4,7 +4,7 @@ function Nav() {
     return (
         <>
             <div className="nav flex">
-                <a href="#" className="navLink"><h1>🎸 IndieExplorer</h1></a>
+                <Link to="/" className="navLink"><h1>🎸 IndieExplorer</h1></Link>
                 <div className="navLinks flex">
                     <div className="dropdown">
                         <a href="#" className="navLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h2>Venues</h2></a>
