@@ -1,14 +1,57 @@
 import ArtistTile from "../components/ArtistTile"
 import AddBand from "./AddBand"
 import Nav from "../components/Nav"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
+
+    const [artistList, setArtistList] = useState([]);
+
+// first, get temporary api access token. This is required to make API calls for Spotify
+
+    // const [accessToken, setAccessToken] = useState("");
+
+    // const authParameters = {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + "&client_secret=" + CLIENT_SECRET
+    // }
+
+    // const fetchAccessToken = async () => {
+    //     try {
+    //         const response = await fetch('https://accounts.spotify.com/api/token', authParameters);
+    //         const data = await response.json();
+    //         setAccessToken(data.access_token);
+    //         console.log(accessToken);
+    //     } catch (error){
+    //         console.log(error);
+    //     }
+    // };
+
+    useEffect(() => {
+
+        axios.get("http://localhost:9999/api/artists")
+            .then((serverResponse) => {
+                console.log(serverResponse.data);
+                setArtistList(serverResponse.data);
+            })
+            .catch(err => console.log(err));
+
+        // fetchAccessToken();
+
+    }, []);
+
     return (
         <>
             <Nav />
 
             <div className="flex intro">
                 <h3>Welcome to IndieExplorer! Check out some of the local artists below or start adding your own.</h3>
+                {/* <Link to={"/addband"}><img className="linkIcon" src="./src/assets/plus-circle-fill.svg" alt="add icon"></img></Link> */}
                 <a href="#collapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse"><img className="linkIcon" src="./src/assets/plus-circle-fill.svg" alt="add icon"></img></a>
             </div>
             <div className="collapse" id="collapse">
@@ -17,47 +60,13 @@ function Home() {
 
             <h1 className="pageHead">Kansas City, Missouri</h1>
 
-            <hr className="divider"></hr>
-            <div className="artistTile flex">
-                <div>
-                    <a className="bandName" href="https://www.instagram.com/saythatagainkc/"><h3>Say That Again</h3></a>
-                    <a href="https://www.instagram.com/saythatagainkc/"><img className="bandPhoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRR7QR1WKlDngp45oXXBqdSRWTmCGFtacpIQ&s" alt="band photo"></img></a>
-                    <div className="flex links">
-                        <a href="https://www.instagram.com/saythatagainkc/"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>
-                        <a href="https://www.facebook.com/SayThatAgainKC/"><img className="linkIcon" src="./src/assets/facebook.svg" alt="snapchat icon"></img></a>
-                        <a href="https://open.spotify.com/artist/3O5vpR1l0itoYo4qAaQ0Of"><img className="linkIcon" src="./src/assets/spotify.svg" alt="spotify icon"></img></a>
-                        <a href="https://www.youtube.com/channel/UCXpJXqaKg_D1UgqwAA3F6qw"><img className="linkIcon" src="./src/assets/youtube.svg" alt="youtube icon"></img></a>
-                    </div>
-                </div>
-                <p className="description">Say That Again, comprised of members Carlos Nunez, Trecen Peeler, Will Kuenne, and Vinnie Cascone, formed by chance at the end of 2019 in Kansas City, Missouri. Their music is a fun blend of Alternative/Indie Rock and Bedroom Pop that'll get your toes tapping. Look forward to catchy hooks and upbeat tempos when listening to a Say That Again song. Say That Again released their debut EP "Flying Cars" in December of 2021 and just released their first full-length album, "Get Over It". Listen to "Get Over It" on all streaming platforms!</p>
-                <div>
-                    <h4>Alternative Rock</h4>
-                    {/* <img className="play" src="./src/assets/play-circle-fill.svg"></img> */}
-                    <iframe className="spotifyPreview" src="https://open.spotify.com/embed/track/3lWHvlNrZVFSc7sI6DvxQH?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-            <hr className="divider"></hr>
-
-            <div className="artistTile flex">
-                <div>
-                    <a className="bandName" href="https://www.instagram.com/doglava/?hl=en"><h3>Doglava</h3></a>
-                    <a href="https://www.instagram.com/doglava/?hl=en"><img className="bandPhoto" src="https://static1.squarespace.com/static/559af0b3e4b0c25a8fabd035/64dfdf8105a6b577d3a14ecb/666b564ae6db3a43920df6fe/1718822943007/Plaza+Art+Fair+-+Doglava.jpg?format=1500w" alt="band photo"></img></a>
-                    <div className="flex links">
-                        <a href="https://www.instagram.com/doglava/?hl=en"><img className="linkIcon" src="./src/assets/instagram.svg" alt="instagram icon"></img></a>
-                        <a href="https://www.facebook.com/doglava/"><img className="linkIcon" src="./src/assets/facebook.svg" alt="facebook icon"></img></a>
-                        <a href="https://open.spotify.com/artist/2DxML1TqtSfKbvmaXb3o4g"><img className="linkIcon" src="./src/assets/spotify.svg" alt="spotify icon"></img></a>
-                        <a href="https://www.youtube.com/channel/UCeemdifrPSdIxtDXLJStIPA"><img className="linkIcon" src="./src/assets/youtube.svg" alt="youtube icon"></img></a>
-                    </div>
-                </div>
-                <p className="description">Hot improv funk jams for dogs! But hoomans can listen too... Just some good boys and girls from Kansas City. Unprofessionally produced music from our kennel to yours.</p>
-                <div>
-                    <h4>Alternative Funk</h4>
-                    {/* <img className="play" src="./src/assets/play-circle-fill.svg"></img> */}
-                    <iframe className="spotifyPreview" src="https://open.spotify.com/embed/track/2LNawnq1nn70chdQUA5aH7?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-
-            <ArtistTile />
+            {
+                artistList.map((artist) => {
+                    return (
+                        <ArtistTile key={artist._id} artist_id={artist.spotifyID} artistObj = {artist} />
+                    )
+                })
+            }
         </>
     )
 }

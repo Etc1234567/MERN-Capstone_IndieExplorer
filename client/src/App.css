@@ -74,12 +74,15 @@ a:hover {
 .description {
   width: 50%;
   border: 1px solid white;
+  /* font-size: 20px; */
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px;
   height: 300px;
   margin-top: 20px;
-  /* overflow: scroll; */
+  overflow: scroll;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   border-radius:12px;
   text-align:left;
   background-color: #3D3D3D;
@@ -102,6 +105,15 @@ a:hover {
   text-decoration: none;
 }
 
+.miniIcon {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.miniIcon:hover {
+  cursor:pointer;
+}
+
 /* BandAdd CSS */
 .bandAdd {
   color: white;
@@ -114,10 +126,14 @@ a:hover {
   margin-bottom: 20px;
   font-size: 20px;
 }
+.bandhead {
+  text-align: center;
+}
 
 .bandAddInput {
   width: 50%;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 /* Footer CSS */
