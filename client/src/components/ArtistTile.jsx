@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 const ArtistTile = (props) => {
 
-     // DELETE THESE BEFORE PUSHING TO GITHUB
+     // Create app in Spotify Dev and put client id and secret here:
     // ******************************
     
     // ******************************
 
     // for each tile, we pass in the artist_id to feed into the Spotify api call and pass in the artistObj from the database
-    const { artist_id, artistObj} = props;
+    const { artist_id, artistObj, artistList, setArtistList } = props;
 
     const navigate = useNavigate();
 
@@ -74,7 +74,11 @@ const ArtistTile = (props) => {
         axios.delete("http://localhost:9999/api/artists/" + id)
             .then(res => {
                 console.log(res.data);
-                navigate("/")
+                let filteredList = artistList.filter((band, index) => {
+                    return band._id !== id
+                })
+                console.log(filteredList);
+                setArtistList(filteredList)
             })
             .catch(err => console.log(err));
     };

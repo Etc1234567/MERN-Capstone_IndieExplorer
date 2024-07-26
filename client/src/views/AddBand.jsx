@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 const AddBand = (props) => {
 
+    const {artistList, setArtistList} = props;
+
     const [bandLink, setBandLink] = useState("");
     const [bandDesc, setBandDesc] = useState("");
     const [instagram, setInstagram] = useState("");
@@ -13,6 +15,8 @@ const AddBand = (props) => {
     const [spotifyID, setSpotifyID] = useState("");
 
     const navigate = useNavigate();
+
+    const formDiv = document.querySelector("#collapse");
     
     const addBand = (e) => {
         e.preventDefault();
@@ -35,7 +39,8 @@ const AddBand = (props) => {
         axios.post("http://localhost:9999/api/artists", newBand)
             .then(response => {
                 console.log(response.data);
-                navigate("/")
+                setArtistList([...artistList, newBand]);
+                formDiv.classList.remove("show");
             })
             .catch(err => {
                 console.log(err);

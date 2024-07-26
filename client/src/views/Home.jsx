@@ -55,7 +55,7 @@ function Home() {
                 <a href="#collapse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse"><img className="linkIcon" src="./src/assets/plus-circle-fill.svg" alt="add icon"></img></a>
             </div>
             <div className="collapse" id="collapse">
-                <AddBand />
+                <AddBand artistList = {artistList} setArtistList = {setArtistList}/>
             </div>
 
             <h1 className="pageHead">Kansas City, Missouri</h1>
@@ -63,7 +63,7 @@ function Home() {
             {
                 artistList.map((artist) => {
                     return (
-                        <ArtistTile key={artist._id} artist_id={artist.spotifyID} artistObj = {artist} />
+                        <ArtistTile key={artist._id} artist_id={artist.spotifyID} artistObj = {artist} artistList = {artistList} setArtistList = {setArtistList} />
                     )
                 })
             }
